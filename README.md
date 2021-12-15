@@ -76,6 +76,9 @@ docker run qyrusai/qyrus-app-automate:latest \
 
 * `/tmp/` - Location from where the apk/ipa file will be picked (optional).
 
+## Contact Us
+support@qyrus.com
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
