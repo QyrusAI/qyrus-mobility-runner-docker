@@ -38,24 +38,43 @@ docker run qyrusai/qyrus-app-automate:latest \
     -e BUNDLE_ID=""
 ```
 
+with docker mount for apk/ipa files
+
+```shell
+docker run qyrusai/qyrus-app-automate:latest \
+    -v host_path:/tmp/ \
+    -e UPLOAD_PATH="app-debug.apk" \
+    -e GATEWAY_URL="https://****.****.***:443/cli-adapter-mobility/v1/v1" \
+    -e QYRUS_USERNAME="********" \
+    -e QYRUS_PASSWORD="********" \
+    -e QYRUS_TEAM_NAME="Ctc End To End" \
+    -e QYRUS_PROJECT_NAME="Mobility Test" \
+    -e QYRUS_SUITE_NAME="AppDebug" \
+    -e APP_ACTIVITY="org.vosk.demo.VoskActivity" \
+    -e DEVICE_POOL_NAME="DemoDevices" \
+    -e UPLOAD_APP="no" \
+    -e ENABLE_DEBUG="no" \
+    -e BUNDLE_ID=""
+```
+
 #### Environment Variables
 
-* `UPLOAD_PATH` - A Description
-* `GATEWAY_URL` - More Description
-* `QYRUS_USERNAME` - And another
+* `UPLOAD_PATH` - Path from where the apk/ipa will be picked and uploaded to Qyrus (If you don't want to upload app then provide the app_name).
+* `GATEWAY_URL` - Enter the url of the gateway which is provided by Qyrus else contact support@qyrus.com.
+* `QYRUS_USERNAME` - The username used to run devops tasks on Qyrus.
 * `QYRUS_PASSWORD` - And another
-* `QYRUS_TEAM_NAME` - And another
-* `QYRUS_PROJECT_NAME` - And another
-* `QYRUS_SUITE_NAME` - And another
-* `APP_ACTIVITY` - And another
-* `DEVICE_POOL_NAME` - And another
-* `UPLOAD_APP` - And another
-* `ENABLE_DEBUG` - And another
-* `BUNDLE_ID` - And another
+* `QYRUS_TEAM_NAME` - Team name you can find by logging into Qyrus app. Copy the team name and paste it.
+* `QYRUS_PROJECT_NAME` - Project name you can find by logging into Qyrus app. Copy the team name and paste it.
+* `QYRUS_SUITE_NAME` - Suite name you can find by logging into Qyrus app. Copy the team name and paste it.
+* `APP_ACTIVITY` - Enter android app activity which will be in the form of com.example.splash_screen
+* `DEVICE_POOL_NAME` - Specify your device pool name which you created on Qyrus, a device pool will have list of devices added and a test run will happen on a device from the pool.
+* `UPLOAD_APP` - If you just want to run tests without upload app change the option to no.
+* `ENABLE_DEBUG` - Prints additional debug information if this option is enabled.
+* `BUNDLE_ID` - Enter iOS app bundleId which will be in the form of com.example.splash_screen (Optional, during android runs)
 
 #### Volumes
 
-* `/your/file/location` - File location
+* `/tmp/` - Location from where the apk/ipa file will be picked (optional).
 
 ## License
 
