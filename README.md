@@ -28,10 +28,10 @@ docker run qyrusai/qyrus-app-automate:latest \
     -e GATEWAY_URL="https://****.****.***:443/cli-adapter-mobility/v1/v1" \
     -e QYRUS_USERNAME="********" \
     -e QYRUS_PASSWORD="********" \
-    -e QYRUS_TEAM_NAME="Ctc End To End" \
+    -e QYRUS_TEAM_NAME="DemoTeam" \
     -e QYRUS_PROJECT_NAME="Mobility Test" \
     -e QYRUS_SUITE_NAME="AppDebug" \
-    -e APP_ACTIVITY="org.vosk.demo.VoskActivity" \
+    -e APP_ACTIVITY="" \
     -e DEVICE_POOL_NAME="DemoDevices" \
     -e UPLOAD_APP="no" \
     -e ENABLE_DEBUG="no" \
@@ -47,10 +47,10 @@ docker run qyrusai/qyrus-app-automate:latest \
     -e GATEWAY_URL="https://****.****.***:443/cli-adapter-mobility/v1/v1" \
     -e QYRUS_USERNAME="********" \
     -e QYRUS_PASSWORD="********" \
-    -e QYRUS_TEAM_NAME="Ctc End To End" \
+    -e QYRUS_TEAM_NAME="DemoTeam" \
     -e QYRUS_PROJECT_NAME="Mobility Test" \
     -e QYRUS_SUITE_NAME="AppDebug" \
-    -e APP_ACTIVITY="org.vosk.demo.VoskActivity" \
+    -e APP_ACTIVITY="" \
     -e DEVICE_POOL_NAME="DemoDevices" \
     -e UPLOAD_APP="no" \
     -e ENABLE_DEBUG="no" \
